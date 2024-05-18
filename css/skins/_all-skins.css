@@ -3,7 +3,8 @@
  * ----------
  */
 .skin-blue .main-header .navbar {
-  background-color: #3c8dbc;
+/*backgroundcolor main header*/
+  background-color: #40294F;
 }
 .skin-blue .main-header .navbar .nav > li > a {
   color: #ffffff;
@@ -59,7 +60,8 @@
 .skin-blue .wrapper,
 .skin-blue .main-sidebar,
 .skin-blue .left-side {
-  background-color: #222d32;
+  /* set background color main page*/
+  background-color: #40294F;
 }
 .skin-blue .user-panel > .info,
 .skin-blue .user-panel > .info > a {
@@ -75,8 +77,10 @@
 .skin-blue .sidebar-menu > li:hover > a,
 .skin-blue .sidebar-menu > li.active > a,
 .skin-blue .sidebar-menu > li.menu-open > a {
+  /*set colors on hoover for icons left side menu*/
   color: #ffffff;
-  background: #1e282c;
+  /*set background color on hoover left side menu*/
+  background: #0ea8e5;
 }
 .skin-blue .sidebar-menu > li.active > a {
   border-left-color: #3c8dbc;
@@ -86,6 +90,7 @@
   background: #2c3b41;
 }
 .skin-blue .sidebar a {
+  /*set textcolor left menu */
   color: #b8c7ce;
 }
 .skin-blue .sidebar a:hover {
