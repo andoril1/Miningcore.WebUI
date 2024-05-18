@@ -23,14 +23,15 @@
 
 
 // read WebURL from current browser
-var WebURL         = window.location.protocol + "//" + window.location.hostname + "/";  // Website URL is:  https://domain.com/
+//var WebURL         = window.location.protocol + "//" + window.location.hostname + "/";  // Website URL is:  https://domain.com/
+var WebURL = "https://pool.flazzard.com";
 // WebURL correction if not ends with /
 if (WebURL.substring(WebURL.length-1) != "/")
 {
 	WebURL = WebURL + "/";
 	console.log('Corrected WebURL, does not end with / -> New WebURL : ', WebURL);
 }
-var API            = "http://213.199.41.113:5000/api/";   						// API address is:  https://domain.com/api/
+var API            = "https://pool.flazzard.com/api/";  						// API address is:  https://domain.com/api/
 // API correction if not ends with /
 if (API.substring(API.length-1) != "/")
 {
