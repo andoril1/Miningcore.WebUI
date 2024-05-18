@@ -281,33 +281,27 @@ Apply one or more of the following classes to get the desired effect
 			<div class="row">
 				<div class="col-lg-6 col-md-12">
 					<div class="card card-chart">
+						<div class="card-body">
+							<center><h4 class="card-category"><i class="fas fa-wave-square"></i> Pool Hashrate</h4></center>
+						</div>
 						<div class="card-header bg-green">
 							<div class="ct-chart" id="chartStatsHashRatePool"></div>
 						</div>
 						<div class="card-body">
-							<h3 class="card-title"><div id="poolHashRate"></div></h3>
-							<p class="card-category"><i class="fas fa-wave-square"></i> Pool Hashrate</p>
-						</div>
-						<div class="card-footer">
-							<div class="stats">
-								
-							</div>
+							<center><h3 class="card-title"><div id="poolHashRate"></div></h3></center>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-12">
 					<div class="card card-chart">
+						<div class="card-body">
+							<center><h4 class="card-category"><i class="fas fa-user"></i> Miners (Workers)</h4></center>
+						</div>
 						<div class="card-header bg-green">
 							<div class="ct-chart" id="chartStatsMiners"></div>
 						</div>
 						<div class="card-body">
-							<h3 class="card-title"><div id="poolMiners"></div></h3>
-							<p class="card-category"><i class="fas fa-user"></i> Miners (Workers)</p>
-						</div>
-						<div class="card-footer">
-							<div class="stats">
-								
-							</div>
+							<center><h3 class="card-title"><div id="poolMiners"></div></h3></center>
 						</div>
 					</div>
 				</div>
@@ -324,37 +318,6 @@ Apply one or more of the following classes to get the desired effect
 						</div>
 					</div>
 				</div>
-			
-				<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-					<div class="info-box">
-						<span class="info-box-icon bg-yellow"><i class="fas fa-code-branch"></i></span>
-						<div class="info-box-content">
-							<span class="info-box-text">Connected Peers</span>
-							<span class="info-box-number"><div id="connectedPeers"></div></span>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-					<div class="info-box">
-						<span class="info-box-icon bg-red"><i class="fas fa-percent"></i></span>
-						<div class="info-box-content">
-							<span class="info-box-text">Pool Fee</span>
-							<span class="info-box-number"><div id="poolFeePercent"></div></span>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-					<div class="info-box">
-						<span class="info-box-icon bg-green"><i class="fas fa-hammer"></i></span>
-						<div class="info-box-content">
-							<span class="info-box-text">Pool Effort</span>
-							<span class="info-box-number"><div id="poolEffort"></div></span>
-						</div>
-					</div>
-				</div>
-
 				<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
 					<div class="info-box">
 						<span class="info-box-icon bg-aqua"><i class="fas fa-cube"></i></span>
@@ -374,37 +337,6 @@ Apply one or more of the following classes to get the desired effect
 						</div>
 					</div>
 				</div>
-
-				<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-					<div class="info-box">
-						<span class="info-box-icon bg-red"><i class="fas fa-hand-holding-usd"></i></span>
-						<div class="info-box-content">
-							<span class="info-box-text">Payment Threshold</span>
-							<span class="info-box-number"><div id="minimumPayment"></div></span>
-						</div>
-					</div>
-				</div>
-			
-				<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-					<div class="info-box">
-						<span class="info-box-icon bg-green"><i class="fas fa-credit-card"></i></span>
-						<div class="info-box-content">
-							<span class="info-box-text">Total Paid</span>
-							<span class="info-box-number"><div id="totalPaid"></div></span>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-					<div class="info-box">
-						<span class="info-box-icon bg-aqua"><i class="far fa-money-bill-alt"></i></span>
-						<div class="info-box-content">
-							<span class="info-box-text">Coin Price</span>
-							<span class="info-box-number"><div id="text_Price"></div></span>
-						</div>
-					</div>
-				</div>
-
 				<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
 					<div class="info-box">
 						<span class="info-box-icon bg-yellow"><i class="fas fa-chart-pie"></i></span>
@@ -414,7 +346,61 @@ Apply one or more of the following classes to get the desired effect
 						</div>
 					</div>
 				</div>
-
+				<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+					<div class="info-box">
+						<span class="info-box-icon bg-red"><i class="fas fa-hand-holding-usd"></i></span>
+						<div class="info-box-content">
+							<span class="info-box-text">Payment Threshold</span>
+							<span class="info-box-number"><div id="minimumPayment"></div></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+					<div class="info-box">
+						<span class="info-box-icon bg-red"><i class="fas fa-percent"></i></span>
+						<div class="info-box-content">
+							<span class="info-box-text">Pool Fee</span>
+							<span class="info-box-number"><div id="poolFeePercent"></div></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+					<div class="info-box">
+						<span class="info-box-icon bg-green"><i class="fas fa-hammer"></i></span>
+						<div class="info-box-content">
+							<span class="info-box-text">Pool Effort</span>
+							<span class="info-box-number"><div id="poolEffort"></div></span>
+						</div>
+					</div>
+				</div>			
+				<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+					<div class="info-box">
+						<span class="info-box-icon bg-green"><i class="fas fa-credit-card"></i></span>
+						<div class="info-box-content">
+							<span class="info-box-text">Total Paid</span>
+							<span class="info-box-number"><div id="totalPaid"></div></span>
+						</div>
+					</div>
+				</div>
+			
+				<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+					<div class="info-box">
+						<span class="info-box-icon bg-yellow"><i class="fas fa-code-branch"></i></span>
+						<div class="info-box-content">
+							<span class="info-box-text">Connected Peers</span>
+							<span class="info-box-number"><div id="connectedPeers"></div></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+					<div class="info-box">
+						<span class="info-box-icon bg-aqua"><i class="far fa-money-bill-alt"></i></span>
+						<div class="info-box-content">
+							<span class="info-box-text">Coin Price</span>
+							<span class="info-box-number"><div id="text_Price"></div></span>
+						</div>
+					</div>
+				</div>
 				<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
 					<div class="info-box">
 						<span class="info-box-icon bg-red"><i class="fas fa-dollar-sign"></i></span>
@@ -443,33 +429,27 @@ Apply one or more of the following classes to get the desired effect
 			<div class="row">
 				<div class="col-lg-6 col-md-12">
 					<div class="card card-chart">
+						<div class="card-body">
+							<center><h4 class="card-category"><i class="fas fa-wave-square"></i> Network Hashrate</h4></center>
+						</div>
 						<div class="card-header bg-yellow">
 							<div class="ct-chart" id="chartStatsHashRate"></div>
 						</div>
 						<div class="card-body">
-							<h3 class="card-title"><div id="networkHashRate"></div></h3>
-							<p class="card-category"><i class="fas fa-wave-square"></i> Network Hashrate</p>
-						</div>
-						<div class="card-footer">
-							<div class="stats">
-								
-							</div>
+							<center><h3 class="card-title"><div id="networkHashRate"></div></h3></center>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-12">
 					<div class="card card-chart">
+						<div class="card-body">
+							<center><h4 class="card-category"><i class="fas fa-hammer"></i> Network Difficulty</h4></center>
+						</div>
 						<div class="card-header bg-yellow">
 							<div class="ct-chart" id="chartStatsDiff"></div>
 						</div>
 						<div class="card-body">
-							<h3 class="card-title"><div id="networkDifficulty"></div></h3>
-							<p class="card-category"><i class="fas fa-hammer"></i> Network Difficulty</p>
-						</div>
-						<div class="card-footer">
-							<div class="stats">
-								
-							</div>
+						<center><h3 class="card-title"><div id="networkDifficulty"></div></h3></center>
 						</div>
 					</div>
 				</div>
@@ -520,6 +500,15 @@ Apply one or more of the following classes to get the desired effect
 					<div class="info-box-content">
 						<span class="info-box-text">Pending Shares</span>
 						<span class="info-box-number"><div id="pendingShares"></div></span>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+				<div class="info-box">
+					<span class="info-box-icon bg-red"><i class="fas fa-hand-holding-usd"></i></span>
+					<div class="info-box-content">
+						<span class="info-box-text">24 Hour Reward</span>
+						<span class="info-box-number"><div id="minerReward"></div></span>
 					</div>
 				</div>
 			</div>

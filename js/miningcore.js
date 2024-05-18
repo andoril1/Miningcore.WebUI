@@ -999,6 +999,7 @@ function loadDashboardData(walletAddress) {
         });
       }
       $("#minerHashRate").text(_formatter(workerHashRate, 5, "H/s"));
+      $("#minerReward").text(_formatter(TwentyFourHourReward, 5, ""));
       $("#pendingBalance").text(_formatter(data.pendingBalance, 5, ""));
       $("#paidBalance").text(_formatter(data.todayPaid, 5, ""));
       $("#lifetimeBalance").text(_formatter(data.pendingBalance + data.totalPaid, 5, "")
