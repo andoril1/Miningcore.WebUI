@@ -75,10 +75,7 @@ body {
   color: #ffffff;
   border-bottom: 0 solid transparent;
 }
-margin-left: auto;
-margin-right: auto;
-left: 0;
-right: 0;
+
 
 
 /* Setting styles for header-container */
@@ -748,23 +745,23 @@ div.card-chart {
   
 }
 .card-header {
-  margin-to	p:  0px;
-  margin-bottom: 0px;
-  margin-left:  0px;
-  margin-right: 0px;
-   
-  border-radius: 0px;
-
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-
-  position: relative;
+	margin-top:  0px;
+	margin-bottom: 0px;
+	margin-left:  0px;
+	margin-right: 0px;
+	 
+	border-radius: 0px;
   
-  background-color: #fff;
-
-}
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
+  
+	position: relative;
+	
+	background-color: #fff;
+  
+  }
 
 .card-title {
   margin-top:  0px;
@@ -1727,11 +1724,8 @@ div.card-chart {
 		border: 1;
 		position: relative;
 		/*padding-left: 50%;*/
-		vertical-align: middle;
 		display: block;
-	
 	  }
-	
 	  #pool-config-new td:first-child {
 		font-weight: bold
 	  }
