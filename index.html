@@ -7,7 +7,7 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <meta name="msapplication-TileImage" content="img/pool-icon.png">
   
-  <title>Miningcore.WebUI</title>
+  <title>Flazzard Mining - Low Fees</title>
   
   <link rel="apple-touch-icon" href="img/pool-icon.png">  
   <link rel="apple-touch-icon" sizes="76x76" href="img/pool-icon.png">
@@ -187,15 +187,15 @@ Apply one or more of the following classes to get the desired effect
 				<div class="card card-shadow card-body bg-green-gradient">
 					<center><h5> Welcome to Flazzard Mining Pool</h5></center>
 					<hr>
-					<p><center>Low fee, high performance and a nice design. </br> Pick a coin, connect you miner and make some coins.</center></p>
+					<p><center>We offer some of the lowest fees on the market in our ever evolving pool.<br>We also aim to be able to payout every 10 minutes to our miners! <br>Please have some patience with us as we are just starting out, the pool will offer more features very soon.</p>
 					</br>
 				</div>
 			</div></center>
 			</br>
 			<div class="col-12">
 				<div class="card card-shadow">
-					<h5 class="card-header red-gradient"><i class="fas fa-coins"></i> Pool Coins</h5>
-					<div class="card-body p-0">
+					<h5 class="card-top red-gradient"><i class="fas fa-coins"></i> Pool Coins</h5>
+					<div class="card-bottom p-0">
 						<div class="table-responsive">
 							<table id="pool-coins" class="table table-striped table-hover ">
 								<thead class="bg-light text-center">
@@ -287,20 +287,20 @@ Apply one or more of the following classes to get the desired effect
 						<div class="card-header bg-green-gradient">
 							<div class="ct-chart" id="chartStatsHashRatePool"></div>
 						</div>
-						<div class="card-body">
+						<div class="card-bottom">
 							<center><h3 class="card-title"><div id="poolHashRate"></div></h3></center>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-12">
-					<div class="card card-chart bg-navy">
-						<div class="card-body">
+					<div class="card card-chart">
+						<div class="card-bottom">
 							<center><h4 class="card-category"><i class="fas fa-user"></i> Miners (Workers)</h4></center>
 						</div>
 						<div class="card-header bg-blue-gradient">
 							<div class="ct-chart" id="chartStatsMiners"></div>
 						</div>
-						<div class="card-body">
+						<div class="card-bottom">
 							<center><h3 class="card-title"><div id="poolMiners"></div></h3></center>
 						</div>
 					</div>
@@ -429,26 +429,26 @@ Apply one or more of the following classes to get the desired effect
 			<div class="row">
 				<div class="col-lg-6 col-md-12">
 					<div class="card card-chart bg-navy">
-						<div class="card-body">
+						<div class="card-top">
 							<center><h4 class="card-category"><i class="fas fa-wave-square"></i> Network Hashrate</h4></center>
 						</div>
 						<div class="card-header bg-maroon-gradient">
 							<div class="ct-chart" id="chartStatsHashRate"></div>
 						</div>
-						<div class="card-body">
+						<div class="card-bottom">
 							<center><h3 class="card-title"><div id="networkHashRate"></div></h3></center>
 						</div>
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-12">
 					<div class="card card-chart bg-navy">
-						<div class="card-body">
+						<div class="card-top">
 							<center><h4 class="card-category"><i class="fas fa-hammer"></i> Network Difficulty</h4></center>
 						</div>
 						<div class="card-header bg-black-gradient">
 							<div class="ct-chart" id="chartStatsDiff"></div>
 						</div>
-						<div class="card-body">
+						<div class="card-bottom">
 						<center><h3 class="card-title"><div id="networkDifficulty"></div></h3></center>
 						</div>
 					</div>
@@ -468,12 +468,12 @@ Apply one or more of the following classes to get the desired effect
 		  <div class="row">
 
             <div class="col-md-12 col-sm-12 col-xs-12">
-				<div class="card">
-					<div class="card-header card-shadow bg-green">
-						<h3 class="card-title">Wallet Address</h3>
-						<p class="card-category">enter your coin wallet address</p>
+				<div class="card bg-navy">
+					<div class="card-top card-shadow bg-yellow-gradient">
+						<center><h3 class="card-title">Wallet Address</h3>
+						<p class="card-category">enter your coin wallet address</p></center>
 					</div>
-					<div class="card-body">
+					<div class="card-bottom">
 					<form>
 						<div class="row">
 							<div class="col-md-12 col-sm-12 col-xs-12">
@@ -498,7 +498,7 @@ Apply one or more of the following classes to get the desired effect
 				<div class="info-box bg-navy">
 					<span class="info-box-icon bg-aqua"><i class="fas fa-receipt"></i></span>
 					<div class="info-box-content">
-						<span class="info-box-text">Pending Shares</span>
+						<span class="info-box-text">Pending:</span>
 						<span class="info-box-number"><div id="pendingShares"></div></span>
 					</div>
 				</div>
@@ -539,6 +539,42 @@ Apply one or more of the following classes to get the desired effect
 					</div>
 				</div>
 			</div>
+			<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+				<div class="info-box bg-navy">
+					<span class="info-box-icon bg-yellow"><i class="fas fa-credit-card" aria-hidden="true"></i></span>
+					<div class="info-box-content">
+						<span class="info-box-text">Custom Payment Threshold</span>
+						<span class="info-box-number">
+							<div id="paymentThreshold"></div>
+
+							<!--Set custom treshold form-->
+							<button class="btn btn-info btn-fill btn-sm" onclick="openModal()">Set
+								threshold</button>
+
+							<!-- The Modal -->
+							<div id="myModal" class="modal" style="display: none;">
+								<!-- Modal content -->
+								<div class="modal-content">
+									<span class="close" onclick="closeModal()">×</span>
+									<form id="ipFormModal" onsubmit="handleSubmit(); return false;">
+										<label for="ipAddressModal">IP Address:</label><br>
+										<input type="text" id="ipAddressModal" name="ipAddressModal" required="" pattern="\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}">
+										<!-- The pattern attribute enforces the input to match the IP address pattern -->
+
+										<label for="thresholdValueModal">Threshold Value:</label><br>
+										<input type="number" id="thresholdValueModal" name="thresholdValueModal" required="">
+
+										<br><br> <button class="btn btn-info btn-fill btn-wd" type="submit">Submit</button>
+									</form>
+								</div>
+							</div>
+
+							<!-- End Set custom treshold form -->
+
+						</span>
+					</div>
+				</div>
+			</div>
 			
 
 		  </div><!-- /.row -->
@@ -547,14 +583,14 @@ Apply one or more of the following classes to get the desired effect
 
 			<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                 <div class="card bg-navy">
-					<div class="card-body">
+					<div class="card-top">
 						<center><h4 class="card-category"><i class="fas fa-wave-square"></i> Miner's Hash Rate</h4></center>
 					</div>
-					<div class="card-header card-chart bg-yellow">
+					<div class="card-header card-chart bg-green-gradient">
 						<div class="ct-chart" id="chartDashboardHashRate"></div>
 					</div>
 					
-                    <div class="card-body">
+                    <div class="card-bottom">
 						<h3 class="card-title"><div id="minerHashRate"></div></h3>
 					</div>
 					
@@ -564,12 +600,11 @@ Apply one or more of the following classes to get the desired effect
 
 			<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
 			
-              <div class="card card-table bg-navy">
-                <div class="card-header bg-aqua">
-                  <h3 class="card-title "><p><i class="fas fa-users"></i> Workers (<span id="workerCount"></span>)</p></h3>
-                  <p class="card-category"> List of miners working for you</p>
+              <div class="card card-table">
+                <div class="card-top">
+                  <h3 class="card-title "><center><i class="fas fa-users"></i> Workers (<span id="workerCount"></span>)</center></h3>
                 </div>
-                <div class="card-body table-hover">
+                <div class="card-middle table-hover">
                   <div class="table-responsive">
                     <table id="miner-workers" class="table miner-workers">
                       <thead class=" text-primary">
@@ -586,12 +621,81 @@ Apply one or more of the following classes to get the desired effect
                     </table>
                   </div>
                 </div>
+				<div class="card-bottom">
+					<center class="card-category"> List of miners working for you</center>
+				</div>
               </div>
 
 			</div>
 			
 		  </div>
+		  <div class="row equal h-100">
+			<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
 
+				<div class="card card-table">
+					<div class="card-top bg-green">
+						<h3 class="card-title ">
+							<p><i class="far fa-money-bill-alt" aria-hidden="true"></i> Daily earnings: <span id="earningsCount"></span></p>
+						</h3>
+					</div>
+					<div class="card-middle table-hover bg-navy">
+						<div class="table-responsive">
+							<table id="pool-miner-earnings" class="table miner-earnings">
+								<thead class=" text-primary">
+
+									<tr class="miner-earnings">
+										<th>Date</th>
+										<th>Amount</th>
+									</tr>
+
+								</thead>
+								<tbody id="dailyEarnings"></tbody>
+							</table>
+						</div>
+					</div>
+					<div class="card-bottom">
+						<center class="card-category"> List of your latest earnings</center>
+					</div>
+				</div>
+
+			</div>
+
+
+			<!-- End Daily earnings-->
+			<!-- miner blocks found-->
+
+			<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+
+				<div class="card card-table">
+					<div class="card-top bg-yellow-gradient">
+						<h3 class="card-title ">
+							<p><i class="fas fa-cubes" aria-hidden="true"></i> Blocks found: <span id="earningsCount"></span></p>
+						</h3>
+					</div>
+					<div class="card-middle table-hover">
+						<div class="table-responsive">
+							<table id="pool-miner-blocks" class="table miner-blocks">
+								<thead class=" text-primary">
+									<tr class="miner-blocks bg-yellow-gradient">
+										<th>Found Time</th>
+										<th>Height</th>
+										<th>Net Diff</th>
+										<th>Effort</th>
+										<th>Reward</th>
+										<th>Status</th>
+										<th>Confirmation</th>
+									</tr>
+								</thead>
+								<tbody id="minerBlockList"></tbody>
+							</table>
+						</div>
+					</div>
+					<div class="card-bottom">
+						<center class="card-category"> List of your latest found blocks</center>
+					</div>
+				</div>
+			</div>
+		</div>
 	    </div>
 	
 	</div>
@@ -607,16 +711,16 @@ Apply one or more of the following classes to get the desired effect
 			<div class="col-lg-12 col-md-12">
 			
               <div class="card">
-                <div class="card-header bg-red">
+                <div class="card-top bg-blue-gradient">
                   <h3 class="card-title "><p><i class="fas fa-users"></i> Best Miners</p></h3>
-                  <p class="card-category"> Top 20 contributors</p>
+                  <p class="card-category"> Top 20 contributors</p> 
                 </div>
-                <div class="card-body table-hover">
+                <div class="card-bottom table-hover">
                   <div class="table-responsive">
                     <table id="miners" class="table miners">
                       <thead class=" text-primary">
                         
-						<tr class="miners">
+						<tr class="miners bg-yellow-gradient">
 							<th>Address</th>
                             <th>Hashrate</th>
                             <th>Share Rate</th>
@@ -644,23 +748,23 @@ Apply one or more of the following classes to get the desired effect
 		
 			<div class="row">
 				<div class="col-md-12 col-sm-12 col-xs-12">
-					<div class="card">
-						<div class="card-header">
+					<div class="card-body-lite">
+						<div class="card-top bg-yellow-gradient">
 							<button class="btn bg-aqua tablinks1" onclick="openCity1(event, 'Confirmed')" id="defaultOpen1"><span id="confirmedBlockCount"></span> Confirmed</button>
 							<button class="btn bg-aqua tablinks1" onclick="openCity1(event, 'Pending')"><span id="pendingBlockCount"></span> Pending</button>
 							<button class="btn bg-aqua tablinks1" onclick="openCity1(event, 'NewBlocks')"><span id="newBlockCount"></span> New</button>
 						</div>
-						<div class="card-body">
+						<div class="card-bottom">
 							<div id="NewBlocks" class="tabcontent1">
 								<div class="card">
-									<div class="card-header bg-green-gradient">
+									<div class="card-top bg-green-gradient">
 										<h3 class="card-title"><p><center>New Blocks</center></p></h3>
 									</div>
-									<div class="card-body table-hover">
+									<div class="card-bottom table-hover">
 										<div class="table-responsive">
 											<table id="blocks" class="table blocks">
 												<thead class=" text-primary">
-													<tr class="blocks">
+													<tr class="blocks bg-yellow-gradient">
 														<th>Found Time</th>
 														<th>Finder</th>
 														<th>Height</th>
@@ -679,14 +783,14 @@ Apply one or more of the following classes to get the desired effect
 							</div>
 							<div id="Pending" class="tabcontent1">
 								<div class="card">
-									<div class="card-header bg-green-gradient">
+									<div class="card-top bg-green-gradient">
 										<h3 class="card-title"><p><center>Pending Blocks</center></p></h3>
 									</div>
 									<div class="card-body table-hover">
 										<div class="table-responsive">
 											<table id="blocks" class="table blocks">
 												<thead class=" text-primary">
-													<tr class="blocks">
+													<tr class="blocks bg-yellow-gradient">
 														<th>Found Time</th>
 														<th>Finder</th>
 														<th>Height</th>
@@ -705,14 +809,14 @@ Apply one or more of the following classes to get the desired effect
 							</div>
 							<div id="Confirmed" class="tabcontent1">
 								<div class="card">
-									<div class="card-header bg-green-gradient">
+									<div class="card-top bg-green-gradient">
 										<h3 class="card-title "><p><center>Confirmed Blocks</center></p></h3>
 									</div>
 									<div class="card-body table-hover">
 										<div class="table-responsive">
 											<table id="blocks" class="table blocks">
 												<thead class=" text-primary">
-													<tr class="blocks">
+													<tr class="blocks bg-yellow-gradient">
 														<th>Found Time</th>
 														<th>Finder</th>
 														<th>Height</th>
@@ -766,16 +870,16 @@ Apply one or more of the following classes to get the desired effect
 		  <div class="row">
 			<div class="col-lg-12 col-md-12">
               <div class="card">
-                <div class="card-header bg-aqua">
+                <div class="card-top bg-aqua">
                   <h3 class="card-title "><p><i class="fas fa-wallet"></i> Payments Rewarded</p></h3>
                   <p class="card-category"> Last 500 payments</p>
                 </div>
-                <div class="card-body table-hover">
+                <div class="card-bottom table-hover">
                   <div class="table-responsive">
                     <table id="payments" class="table payments">
                       <thead class=" text-primary">
                         
-						<tr class="payments">
+						<tr class="payments bg-yellow-gradient">
 							<th>Sent</th>
                             <th>Address</th>
                             <th>Amount</th>
@@ -803,15 +907,15 @@ Apply one or more of the following classes to get the desired effect
 		  <div class="row">
 			<div class="col-lg-12 col-md-12">
               <div class="card">
-                <div class="card-header bg-maroon-gradient">
-                  <h3 class="card-title "><p><i class="fas fa-plug"></i> Pool Configuration</p></h3>
-                  <p class="card-category"> All you need to connect your miners</p>
+                <div class="card-top bg-maroon-gradient">
+                  <center><h3 class="card-title "><i class="fas fa-plug"></i>&nbsp; Pool Configuration</h3></center>
+                  <p class="card-category"> <center>All you need to connect your miners</center></p>
                 </div>
-                <div class="card-body table-hover">
+                <div class="card-bottom table-hover">
                   <div class="table-responsive">
                     <table id="pool-config" class="table pool-config">
                       <thead class=" text-primary">
-						<tr class="pool-config">
+						<tr class="pool-config bg-yellow-gradient">
 							<th>Item</th>
                             <th>Value</th>
                         </tr>
@@ -843,13 +947,13 @@ Apply one or more of the following classes to get the desired effect
 		  <div class="row">
                 <div class="col-lg-12 col-sm-12">
                   <div class="card">
-                    <div class="card-header bg-black-gradient">
+                    <div class="card-top bg-black-gradient">
 						<h4 class="card-title"><i class="fas fa-comment-dots"></i> FAQ</h4>
 						<p class="card-category">
 							How does the pool work?
 						</p>
 					</div>
-                    <div class="card-body table-responsive faq">
+                    <div class="card-bottom table-responsive faq">
                       <h4>Do I need to register an account to mine?</h4>
                       <p>
                         Registration is not required. Just configure your miner
@@ -1004,7 +1108,7 @@ Apply one or more of the following classes to get the desired effect
 		  <div class="row">
             <div class="col-lg-12 col-sm-12">
                 <div class="card">
-                   <div class="card-header bg-teal-gradient"><h4 class="title"><i class="ti-headphone-alt"></i> Support</h4></div>
+                   <div class="card-top bg-teal-gradient"><h4 class="title"><i class="ti-headphone-alt"></i> Support</h4></div>
                     <div class="content table-responsive table-full-width">
                       <a href="https://discord.gg/" target="_blank"> <img style="width:300px;" src="img/discord.png" alt="Discord"> </a>
                       <a href="https://t.me/joinchat/" target="_blank"> <img style="width:300px;" src="img/telegram.png" alt="Telegram"> </a>

@@ -75,7 +75,32 @@ body {
   color: #ffffff;
   border-bottom: 0 solid transparent;
 }
+margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
 
+
+/* Setting styles for header-container */
+.header-container {
+position: fixed; /* Fix the header at the top of the viewport */
+top: 0; /* Align the header to the top */
+width: 100%; /* Adjust width as needed */
+height: 40px;
+display: flex;
+justify-content: space-between; /* Align items horizontally with space between them */
+align-items: center; /* Align items vertically */
+background-color: #828282; /* Change color as per your preference */
+color: #fff; /* Change text color as per your preference */
+z-index: 1000; /* Ensure the header appears above other content */
+}
+
+
+/* Align content to the right */
+.header-container .right-content {
+margin-left: auto; /* Pushes the content to the right */
+margin-right: 14px; /* Add space between content and edge of the screen */
+}
 .main-index {
   min-height: 100vh;
 }
@@ -117,7 +142,84 @@ body {
   padding-right: 15px;
 }
 
+.loading-dot {
+	animation: loadingAnimation 1s infinite;
+  }
+  
+  @keyframes loadingAnimation {
+	0% { opacity: 0; }
+	50% { opacity: 1; }
+	100% { opacity: 0; }
+  }
+  
+  /*!***************************************************************
+					Set Payment threshold form
+  *****************************************************************/
+  #myModal {
+	display: none;
+	position: fixed;
+	z-index: 9999; /* Set z-index to a high value */
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.4);
+	padding-top: 50px;
+  }
+  .modal-content {
+	  background-color: #fefefe;
+	  margin: 5% auto; /* Centers the modal vertically and horizontally */
+	  padding: 20px;
+	  border: 1px solid #888;
+	  width: 80%;
+	  max-width: 265px; /* Adjust the maximum width as needed */
+  }
+  
+  .close {
+	color: red;
+	float: none; /* Remove the float property */
+	font-size: 28px;
+	font-weight: bold;
+	position: absolute; /* Position the close button absolutely */
+	top: 10px; /* Adjust the top position as needed */
+	right: 10px; /* Position the close button to the right */
+  }
+  .close:hover,
+  .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+  }
+  
+  #ipAddressModal {
+	width: 100%; /* Adjust the percentage as needed */
+  }
+  
+  #thresholdValueModal {
+	width: 100%; /* Adjust the percentage as needed */
+  }
 
+/* Setting styles for header-container */
+.header-container {
+position: fixed; /* Fix the header at the top of the viewport */
+top: 0; /* Align the header to the top */
+width: 100%; /* Adjust width as needed */
+height: 40px;
+display: flex;
+justify-content: space-between; /* Align items horizontally with space between them */
+align-items: center; /* Align items vertically */
+background-color: #828282; /* Change color as per your preference */
+color: #fff; /* Change text color as per your preference */
+z-index: 1000; /* Ensure the header appears above other content */
+}
+
+
+/* Align content to the right */
+.header-container .right-content {
+margin-left: auto; /* Pushes the content to the right */
+margin-right: 14px; /* Add space between content and edge of the screen */
+}
 
 
 /*!***************************************************************
@@ -275,7 +377,7 @@ body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	line-height: 20px;
-	color: #333;
+	color: #fff;
 	max-width: 100%;
 	border-spacing: 0;
 	border-collapse: collapse;
@@ -306,7 +408,53 @@ body {
 .table td:hover {
 	cursor: pointer;
 }
-	
+
+table td.effort0 {
+	color: #50C878;
+  }
+  
+  table td.effort1 {
+	color: #FFA500;
+  }
+  
+  
+  table td.effort2 {
+	color: #FF8C00;
+  }
+  
+  
+  table td.effort3 {
+	color: #FF6347;
+  }
+  
+  
+  table td.effort4 {
+	color: #FF4500;
+  }
+  
+  div.effort0 {
+	color: #50C878;
+  }
+  
+  div.effort1 {
+	color: #FFA500;
+  }
+  
+  
+  div.effort2 {
+	color: #FF8C00;
+  }
+  
+  
+  div.effort3 {
+	color: #FF6347;
+  }
+  
+  
+  div.effort4 {
+	color: #FF4500;
+  }
+	  
 .table a {
 	color: #000000 ;
 }
@@ -331,12 +479,12 @@ body {
   margin-right:  1px;
    
   border:        0px;
-  border-radius: 6px;
+  border-radius: 20px;
 
   padding-top:    8px;
   padding-bottom: 8px;
-  padding-left:   30px;
-  padding-right:  30px;
+  padding-left:   8px;
+  padding-right:  8px;
 
   position: relative;
 
@@ -493,25 +641,26 @@ body {
 ****************************************************************/
 .info-box {
  display:block;
- min-height:90px;
+ min-height:120px;
  background:#fff;
  width:100%;
- box-shadow:0 1px 1px rgba(0,0,0,0.1);
- border-radius:2px;
- margin-bottom:15px
+ box-shadow:0 5px 5px rgba(0,0,0,0.5);
+ border-radius:10px;
+ margin-bottom:15px;
+ text-align: center;
 }
 .info-box-icon {
- border-top-left-radius:2px;
+ border-top-left-radius:10px;
  border-top-right-radius:0;
  border-bottom-right-radius:0;
- border-bottom-left-radius:2px;
+ border-bottom-left-radius:10px;
  display:block;
  float:left;
- height:90px;
+ height:120px;
  width:90px;
  text-align:center;
  font-size:45px;
- line-height:90px;
+ line-height:120px;
  background:rgba(0,0,0,0.2)
 }
 .info-box-icon>img {
@@ -538,10 +687,10 @@ body {
 }
 
 .card {
-  border: 0;
+  border: 5;
   margin-top: 20px;
   margin-bottom: 20px;
-  border-radius: 6px;
+  border-radius: 20px;
   color: #333333;
   background: #fff;
   border: 1px solid #eeeeee;
@@ -550,7 +699,7 @@ body {
   flex-direction: column;
   font-size: 1rem;
   word-wrap: normal;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.5), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 div.card-table {
@@ -579,14 +728,32 @@ div.card-chart {
 .card [class*="card-header"] .ct-chart .ct-series-a .ct-slice-donut {
   stroke: rgba(255, 255, 255, 0.8);
 }
-
-.card-header {
+.card-top {
   margin-top:  0px;
   margin-bottom: 0px;
   margin-left:  0px;
   margin-right: 0px;
+	 
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;	
+  
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  
+  position: relative;
+	
+  background-color: #F97149;
+  
+}
+.card-header {
+  margin-to	p:  0px;
+  margin-bottom: 0px;
+  margin-left:  0px;
+  margin-right: 0px;
    
-  border-radius: 3px;
+  border-radius: 0px;
 
   padding-top: 15px;
   padding-bottom: 15px;
@@ -627,7 +794,8 @@ div.card-chart {
   margin-right: 0px;
   
   border-bottom: 1px;
-  border-radius: 5px;
+  border-radius: 20px;
+  background-color: #DE6640;
 
   padding-top: 10px;
   padding-bottom: 5px;
@@ -636,11 +804,87 @@ div.card-chart {
 
   font-size: 16px;  
 }
+.card-body-lite {
+	margin-top:  0px;
+	margin-bottom: 0px;
+	margin-left:  0px;
+	margin-right: 0px;
+	
+	border-bottom: 1px;
+	border-radius: 20px;
+	background-color: #E17857;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 20px; 
+  
+	font-size: 16px;  
+  }
+.card-middle {
+	margin-top:  0px;
+	margin-bottom: 0px;
+	margin-left:  0px;
+	margin-right: 0px;
+	
+	border-bottom: 1px;
+	background-color: #828282;
+  
+	padding-top: 10px;
+	padding-bottom: 140px;
+	padding-left: 0px;
+	padding-right: 0px; 
+  
+	font-size: 16px;  
+  }
+.card-table {
+	margin-top:  0px;
+	margin-bottom: 0px;
+	margin-left:  0px;
+	margin-right: 0px;
+	
+	border-bottom: 1px;
+	border-top-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+  
+	padding-top: 10px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 20px; 
+	background-color: #F97149;
+	font-size: 16px;  
+  }
+.card-bottom {
+	margin-top:  0px;
+	margin-bottom: 0px;
+	margin-left:  0px;
+	margin-right: 0px;
+	
+	border-bottom: 1px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	background-color:#F97149;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	padding-left: 0px;
+	padding-right: 0px; 
+  
+	font-size: 16px;  
+  }
+
+  .card-bottom .table { 
+	margin-bottom: 0px;
+	
+  }
 
 .card-body .table { 
   margin-bottom: 0px;
   
 }
+.card-middle .table {
+	margin-bottom: 0px;
+  
+  }
+  
 
 .card-footer {
   padding-top: 5px;
@@ -683,7 +927,7 @@ div.card-chart {
   margin-left:  5px;
   margin-right: 5px;
    
-  border-radius: 6px;
+  border-radius: 10px;
 
   padding-top: 8px;
   padding-bottom: 8px;
@@ -885,7 +1129,23 @@ div.card-chart {
 	.main-footer {
 		margin-left:0
 	}
-	
+	.header-text {
+		-webkit-transition: width .3s ease-in-out;
+		-o-transition: width .3s ease-in-out;
+		transition: width .3s ease-in-out;
+		display: block;
+		float: left;
+		height: 100%;
+		font-size: 20px;
+		line-height: 50px;
+		text-align: center;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		padding: 0 15px;
+		font-weight: 300;
+		overflow: hidden;
+		color: #ffffff;
+		border-bottom: 0 solid transparent;
+	  }
 	.sidebar-open .main-header,
 	.sidebar-open .content-wrapper,
 	.sidebar-open .main-footer {
@@ -957,12 +1217,65 @@ div.card-chart {
 		font-size: 0.9rem;
 	}
 
+	table td.effort1 {
+		color: #FFA500;
+	  }
+	
+	
+	  table td.effort2 {
+		color: #FF8C00;
+	  }
+	
+	
+	  table td.effort3 {
+		color: #FF6347;
+	  }
+	
+	
+	  table td.effort4 {
+		color: #FF4500;
+	  }
+	
+	  div.effort0 {
+		color: #50C878;
+	  }
+	  
+	  div.effort1 {
+		color: #FFA500;
+	  }
+	  
+	  
+	  div.effort2 {
+		color: #FF8C00;
+	  }
+	  
+	  
+	  div.effort3 {
+		color: #FF6347;
+	  }
+	  
+	  
+	  div.effort4 {
+		color: #FF4500;
+	  }
 	
 	/* Force table to not be like tables anymore */
 	#pool-coins table, thead, tbody, th, td, tr { 
 		display: block; 
+	
+	}
+	#pool-coins th:hover {
+		background-color: #f2f2f2 !important;
 	}
 	
+	/* Ensure higher specificity for .asc:after and .desc:after rules */
+	#pool-coins th.asc:after {
+		content: 'VVVï¿½' !important;
+	}
+	
+	#pool-coins th.desc:after {
+		content: ' PPPï¿½' !important;
+	}
 	/* Hide table headers (but not display: none;, for accessibility) */
 	#pool-coins thead tr { 
 		position: absolute;
@@ -1000,24 +1313,606 @@ div.card-chart {
 		display: inline-block;
 	}
 	
-	/*
-	Label the data
-	*/
-	#pool-coins td:nth-of-type(1):before { content: "Pool coin"; }
-	#pool-coins td:nth-of-type(2):before { content: "Symbol"; }
-	#pool-coins td:nth-of-type(3):before { content: "Algorithm"; }
-	#pool-coins td:nth-of-type(4):before { content: "Pool Fee"; }
-	#pool-coins td:nth-of-type(5):before { content: "Minimum Payment"; }
-	#pool-coins td:nth-of-type(6):before { content: "Miners"; }
-	#pool-coins td:nth-of-type(7):before { content: "Pool Hashrate"; }
-	#pool-coins td:nth-of-type(8):before { content: "Network Dominance"; }
-	#pool-coins td:nth-of-type(9):before { content: "Network Hashrate"; }
-	#pool-coins td:nth-of-type(10):before { content: "Network Difficulty"; }
-	#pool-coins td:nth-of-type(11):before { content: "BlockHeight"; }
-	#pool-coins td:nth-of-type(12):before { content: "Last Found"; }
-	#pool-coins td:nth-of-type(13):before { content: ""; }
- 
-	.sidebar-open .main-sidebar {
+	#pool-coins td:nth-of-type(1):before {
+		content: "Pool coin";
+		font-weight: bold;
+	  }
+	
+	  #pool-coins td:nth-of-type(2):before {
+		content: "Symbol";
+	  }
+	
+	  #pool-coins td:nth-of-type(3):before {
+		content: "Algorithm";
+	  }
+	
+	  #pool-coins td:nth-of-type(4):before {
+		content: "Pool Fee";
+	  }
+	
+	  #pool-coins td:nth-of-type(5):before {
+		content: "Minimum Payment";
+	  }
+	
+	  #pool-coins td:nth-of-type(6):before {
+		content: "Miners";
+	  }
+	
+	  #pool-coins td:nth-of-type(7):before {
+		content: "Pool Hashrate";
+	  }
+	
+	  #pool-coins td:nth-of-type(8):before {
+		content: "Network Dominance";
+	  }
+	
+	  #pool-coins td:nth-of-type(9):before {
+		content: "Network Hashrate";
+	  }
+	
+	  #pool-coins td:nth-of-type(10):before {
+		content: "Network Difficulty";
+	  }
+	
+	  #pool-coins td:nth-of-type(11):before {
+		content: "BlockHeight";
+	  }
+	
+	  #pool-coins td:nth-of-type(12):before {
+		content: "Last Found";
+	  }
+	
+	  /*	#pool-coins td:nth-of-type(13):before { content: ""; }*/
+	
+	  /* Force table to not be like tables anymore */
+	  #pool-coins-blocks table,
+	  thead,
+	  tbody,
+	  th,
+	  td,
+	  tr {
+		display: block;
+		padding-bottom: 10px;
+	  }
+	
+	  /* Hide table headers (but not display: none;, for accessibility) */
+	  #pool-coins-blocks thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	  }
+	
+	  #pool-coins-blocks tr {
+		border: 2px solid #ccc;
+		margin-bottom: 10px;
+	  }
+	
+	  #pool-coins-blocks td {
+		/* Behave  like a "row" */
+		border: 1;
+		position: relative;
+		padding-left: 50%;
+		vertical-align: middle;
+	  }
+	
+	  #pool-coins-blocks td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		left: 10px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		vertical-align: middle;
+	  }
+	
+	  #pool-coins-blocks img.coinimg {
+		width: 25px;
+		height: 25px;
+		vertical-align: middle;
+		margin-left: .2rem;
+		margin-right: .2rem;
+		display: inline-block;
+	  }
+	
+	  /*
+			Label the data
+			*/
+	  #pool-coins-blocks td:nth-of-type(1):before {
+		content: "Found Time";
+		font-weight: bold;
+	  }
+	
+	  #pool-coins-blocks td:nth-of-type(2):before {
+		content: "Finder";
+		font-weight: bold;
+	  }
+	
+	  #pool-coins-blocks td:nth-of-type(3):before {
+		content: "Height";
+		font-weight: bold;
+	  }
+	
+	  #pool-coins-blocks td:nth-of-type(4):before {
+		content: "Net Diff";
+		font-weight: bold;
+	  }
+	
+	  #pool-coins-blocks td:nth-of-type(5):before {
+		content: "Effort";
+		font-weight: bold;
+	  }
+	
+	  #pool-coins-blocks td:nth-of-type(6):before {
+		content: "Reward";
+		font-weight: bold;
+	  }
+	
+	  #pool-coins-blocks td:nth-of-type(7):before {
+		content: "Status";
+		font-weight: bold;
+	  }
+	
+	  #pool-coins-blocks td:nth-of-type(8):before {
+		content: "Confirmation";
+		font-weight: bold;
+	  }
+	
+	
+	
+	
+	  /* Force table to not be like tables anymore */
+	  #pool-miner-blocks table,
+	  thead,
+	  tbody,
+	  th,
+	  td,
+	  tr {
+		display: block;
+		padding-bottom: 10px;
+	  }
+	
+	  /* Hide table headers (but not display: none;, for accessibility) */
+	  #pool-miner-blocks thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	  }
+	
+	  #pool-miner-blocks tr {
+		border: 2px solid #ccc;
+		margin-bottom: 10px;
+	  }
+	
+	  #pool-miner-blocks td {
+		/* Behave  like a "row" */
+		border: 1;
+		position: relative;
+		padding-left: 50%;
+		vertical-align: middle;
+	  }
+	
+	  #pool-miner-blocks td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		left: 10px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		vertical-align: middle;
+	  }
+	
+	  #pool-miner-blocks img.coinimg {
+		width: 25px;
+		height: 25px;
+		vertical-align: middle;
+		margin-left: .2rem;
+		margin-right: .2rem;
+		display: inline-block;
+	  }
+	
+	  /*
+			Label the data
+			*/
+	  #pool-miner-blocks td:nth-of-type(1):before {
+		content: "Found Time";
+		font-weight: bold;
+	  }
+	
+	  #pool-miner-blocks td:nth-of-type(2):before {
+		content: "Height";
+		font-weight: bold;
+	  }
+	
+	  #pool-miner-blocks td:nth-of-type(3):before {
+		content: "Net Diff";
+		font-weight: bold;
+	  }
+	
+	  #pool-miner-blocks td:nth-of-type(4):before {
+		content: "Effort";
+		font-weight: bold;
+	  }
+	
+	  #pool-miner-blocks td:nth-of-type(5):before {
+		content: "Reward";
+		font-weight: bold;
+	  }
+	
+	  #pool-miner-blocks td:nth-of-type(6):before {
+		content: "Status";
+		font-weight: bold;
+	  }
+	
+	  #pool-miner-blocks td:nth-of-type(7):before {
+		content: "Confirmation";
+		font-weight: bold;
+	  }
+	
+	
+	
+	
+	
+	
+	
+	  /* Force table to not be like tables anymore */
+	  #pool-miners table,
+	  thead,
+	  tbody,
+	  th,
+	  td,
+	  tr {
+		display: block;
+		padding-bottom: 10px;
+	  }
+	
+	  /* Hide table headers (but not display: none;, for accessibility) */
+	  #pool-miners thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	  }
+	
+	  #pool-miners tr {
+		border: 2px solid #ccc;
+		margin-bottom: 10px;
+	  }
+	
+	  #pool-miners td {
+		/* Behave  like a "row" */
+		border: 1;
+		position: relative;
+		padding-left: 50%;
+		vertical-align: middle;
+	  }
+	
+	  #pool-miners td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		left: 10px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		vertical-align: middle;
+	  }
+	
+	  #pool-miners img.coinimg {
+		width: 25px;
+		height: 25px;
+		vertical-align: middle;
+		margin-left: .2rem;
+		margin-right: .2rem;
+		display: inline-block;
+	  }
+	
+	  /*
+			Label the data
+			*/
+	  #pool-miners td:nth-of-type(1):before {
+		content: "Address";
+		font-weight: bold;
+	  }
+	
+	  #pool-miners td:nth-of-type(2):before {
+		content: "Hashrate";
+		font-weight: bold;
+	  }
+	
+	  #pool-miners td:nth-of-type(3):before {
+		content: "Share Rate";
+		font-weight: bold;
+	  }
+	
+	  /* Force table to not be like tables anymore */
+	  #pool-payments table,
+	  thead,
+	  tbody,
+	  th,
+	  td,
+	  tr {
+		display: block;
+		padding-bottom: 10px;
+	  }
+	
+	  /* Hide table headers (but not display: none;, for accessibility) */
+	  #pool-payments thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	  }
+	
+	  #pool-payments tr {
+		border: 2px solid #ccc;
+		margin-bottom: 10px;
+	  }
+	
+	  #pool-payments td {
+		/* Behave  like a "row" */
+		border: 1;
+		position: relative;
+		padding-left: 50%;
+		vertical-align: middle;
+	  }
+	
+	  #pool-payments td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		left: 10px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		vertical-align: middle;
+	  }
+	
+	  #pool-payments img.coinimg {
+		width: 25px;
+		height: 25px;
+		vertical-align: middle;
+		margin-left: .2rem;
+		margin-right: .2rem;
+		display: inline-block;
+	  }
+	
+	  /*
+			Label the data
+			*/
+	  #pool-payments td:nth-of-type(1):before {
+		content: "Sent";
+		font-weight: bold;
+	  }
+	
+	  #pool-payments td:nth-of-type(2):before {
+		content: "Address";
+		font-weight: bold;
+	  }
+	
+	  #pool-payments td:nth-of-type(3):before {
+		content: "Amount";
+		font-weight: bold;
+	  }
+	
+	  #pool-payments td:nth-of-type(4):before {
+		content: "Confirmation";
+		font-weight: bold;
+	  }
+	
+	  /* Force table to not be like tables anymore */
+	  #pool-config-new table,
+	  thead,
+	  tbody,
+	  th,
+	  td,
+	  tr {
+		display: none;
+		padding-bottom: 10px;
+	  }
+	
+	  /* Hide table headers (but not display: none;, for accessibility) */
+	  #pool-config-new thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	  }
+	
+	  #pool-config-new tr {
+		border: 2px solid #ccc;
+		margin-bottom: 10px;
+	  }
+	
+	  #pool-config-new td {
+		/* Behave  like a "row" */
+		border: 1;
+		position: relative;
+		/*padding-left: 50%;*/
+		vertical-align: middle;
+		display: block;
+	
+	  }
+	
+	  #pool-config-new td:first-child {
+		font-weight: bold
+	  }
+	
+	  #pool-config-new td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		left: 10px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		vertical-align: middle;
+	  }
+	
+	  #pool-config-new img.coinimg {
+		width: 25px;
+		height: 25px;
+		vertical-align: middle;
+		margin-left: .2rem;
+		margin-right: .2rem;
+		display: inline-block;
+	  }
+	
+	  /*
+			Label the data
+			
+			#pool-config-new td:nth-of-type(1):before { content: "Item"; font-weight: bold;}
+			#pool-config-new td:nth-of-type(2):before { content: "Value"; font-weight: bold;}
+		*/
+	
+	  /* Force table to not be like tables anymore */
+	  #pool-miner-workers table,
+	  thead,
+	  tbody,
+	  th,
+	  td,
+	  tr {
+		display: block;
+		padding-bottom: 10px;
+	  }
+	
+	  /* Hide table headers (but not display: none;, for accessibility) */
+	  #pool-miner-workers thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	  }
+	
+	  #pool-miner-workers tr {
+		border: 2px solid #ccc;
+		margin-bottom: 10px;
+	  }
+	
+	  #pool-miner-workers td {
+		/* Behave  like a "row" */
+		border: 1;
+		position: relative;
+		padding-left: 50%;
+		vertical-align: middle;
+	  }
+	
+	  #pool-miner-workers td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		left: 10px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		vertical-align: middle;
+	  }
+	
+	  #pool-miner-workers img.coinimg {
+		width: 25px;
+		height: 25px;
+		vertical-align: middle;
+		margin-left: .2rem;
+		margin-right: .2rem;
+		display: inline-block;
+	  }
+	
+	  /*
+			Label the data
+			*/
+	  #pool-miner-workers td:nth-of-type(1):before {
+		content: "Index";
+		font-weight: bold;
+	  }
+	
+	  #pool-miner-workers td:nth-of-type(2):before {
+		content: "Name";
+		font-weight: bold;
+	  }
+	
+	  #pool-miner-workers td:nth-of-type(3):before {
+		content: "Hashrate";
+		font-weight: bold;
+	  }
+	
+	  #pool-miner-workers td:nth-of-type(3):before {
+		content: "Share Rate";
+		font-weight: bold;
+	  }
+	
+	
+	
+	
+	
+	  /* Force table to not be like tables anymore */
+	  #pool-miner-earnings table,
+	  thead,
+	  tbody,
+	  th,
+	  td,
+	  tr {
+		display: block;
+		padding-bottom: 0px;
+	  }
+	
+	  /* Hide table headers (but not display: none;, for accessibility) */
+	  #pool-miner-earnings thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	  }
+	
+	  #pool-miner-earnings tr {
+		border: 2px solid #ccc;
+		margin-bottom: 10px;
+	  }
+	
+	  #pool-miner-earnings td {
+		/* Behave  like a "row" */
+		border: 1;
+		position: relative;
+		padding-left: 50%;
+		vertical-align: middle;
+	  }
+	
+	  #pool-miner-earnings td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		left: 10px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		vertical-align: middle;
+	  }
+	
+	  #pool-miner-earnings img.coinimg {
+		width: 25px;
+		height: 25px;
+		vertical-align: middle;
+		margin-left: .2rem;
+		margin-right: .2rem;
+		display: inline-block;
+	  }
+	
+	  /*
+			Label the data
+			*/
+	  #pool-miner-earnings td:nth-of-type(1):before {
+		content: "Date";
+		font-weight: bold;
+	  }
+	
+	  #pool-miner-earnings td:nth-of-type(2):before {
+		content: "Amount";
+		font-weight: bold;
+	  }	
+	  .sidebar-open .main-header,
+  	  .sidebar-open .content-wrapper,
+  	  .sidebar-open .main-footer {
+       -webkit-transform: translate(230px, 0);
+       -ms-transform: translate(230px, 0);
+       -o-transform: translate(230px, 0);
+       transform: translate(230px, 0)
+  	}
+	  .sidebar-open .main-sidebar {
 		-webkit-transform:translate(0, 0);
 		-ms-transform:translate(0, 0);
 		-o-transform:translate(0, 0);
